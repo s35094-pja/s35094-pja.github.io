@@ -284,10 +284,15 @@ ul.simple-list li {
 /* ===== MAP ===== */
 .map-box {
   margin-top: 2rem;
+  text-align: center; /* Центрируем контейнер с картой */
 }
 .map-image {
-  max-width: 100%;
+  /* Мы жестко фиксируем размеры картинки под оригинальный чертеж */
+  width: 680px !important;
+  height: 200px !important;
   border: 4px solid #ffffff;
+  display: block;
+  margin: 0 auto; /* Центрируем саму картинку на темном фоне */
 }
 /* ===== FOOTER ===== */
 .site-footer {
@@ -364,6 +369,12 @@ ul.simple-list li {
   .section {
     padding: 3.5rem 0;
   }
+  /* Для мобильных экранов плавно уменьшаем и центрируем карту */
+  .map-image {
+    width: 100% !important;
+    max-width: 680px !important;
+    height: auto !important;
+  }
 }
 @media (min-width: 1600px) {
   body {
@@ -380,3 +391,4 @@ ul.simple-list li {
     height: 380px;
   }
 }
+
